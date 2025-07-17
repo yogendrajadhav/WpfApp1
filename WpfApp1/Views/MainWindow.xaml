@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="WPF MVVM Navigation + DI" Height="450" Width="800">
+
+    <DockPanel>
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Top" Margin="5">
+            <Button Content="Home" Margin="5" Command="{Binding NavigateHomeCommand}"></Button>
+            <Button Content="About" Margin="5" Command="{Binding NavigateAboutCommand}"></Button>
+            <Button Content="ShowDialog" Margin="5" Command="{Binding ShowDialogCommand}"></Button>
+            <Button Content="Toggle Theme" Margin="5" Command="{Binding ToggleThemeCommand}"></Button>
+            <ContentControl Content="{Binding CurrentView}" Margin="5"> </ContentControl>
+        </StackPanel>
+    </DockPanel>
+
+</Window>
