@@ -77,7 +77,9 @@ namespace WpfApp1.ViewModels
                         Progress = current;
                         Status = $"Progress: {current}";
                         TodoItems.Add(new TodoItem() { Priority = PriorityLevel.Medium, Title = $"Item {current}" });
+
                     }), DispatcherPriority.Background);
+
                     Task.Delay(50).Wait(); //simulate work
                   
                 }
