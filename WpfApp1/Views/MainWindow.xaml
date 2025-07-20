@@ -7,13 +7,17 @@
         Title="WPF MVVM Navigation + DI" Height="450" Width="800">
 
     <DockPanel>
+
         <StackPanel Orientation="Vertical" DockPanel.Dock="Top" Margin="5">
             <Button Content="Home" Margin="5" Command="{Binding NavigateHomeCommand}"></Button>
             <Button Content="About" Margin="5" Command="{Binding NavigateAboutCommand}"></Button>
+            <Button Content="TodoItems" Margin="5" Command="{Binding NavigateTodoItemCommand}"></Button>
             <Button Content="ShowDialog" Margin="5" Command="{Binding ShowDialogCommand}"></Button>
             <Button Content="Toggle Theme" Margin="5" Command="{Binding ToggleThemeCommand}"></Button>
-            <ContentControl Content="{Binding CurrentView}" Margin="5"> </ContentControl>
         </StackPanel>
+
+        <ContentControl Content="{Binding CurrentView}" Margin="5"></ContentControl>
+
     </DockPanel>
 
 </Window>

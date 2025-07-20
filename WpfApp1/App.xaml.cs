@@ -29,6 +29,7 @@ namespace WpfApp1
                     services.AddSingleton<MainViewModel>();
                     services.AddTransient<HomeViewModel>();
                     services.AddTransient<AboutViewModel>();
+                    services.AddTransient<TodoItemViewModel>();
 
                     // Register views
                     services.AddSingleton<MainWindow>();

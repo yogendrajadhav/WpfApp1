@@ -12,5 +12,8 @@
         <DataTemplate DataType="{x:Type viewModels:AboutViewModel}">
             <views:AboutView></views:AboutView>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:TodoItemViewModel}">
+            <views:TodoItemView></views:TodoItemView>
+        </DataTemplate>
     </Application.Resources>
 </Application>

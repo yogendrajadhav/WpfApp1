@@ -32,6 +32,12 @@ namespace WpfApp1.ViewModels
             {
                 CurrentView = this._navigationService.GetViewModel<AboutViewModel>();
             });
+
+            NavigateTodoItemCommand = new RelayCommand(() =>
+            {
+                CurrentView = this._navigationService.GetViewModel<TodoItemViewModel>();
+            });
+
             ShowDialogCommand = new RelayCommand(() => _dialogService.ShowMessage("Hello", "This is a custom dialog"));
             ToggleThemeCommand = new RelayCommand(SwitchTheme);
 
@@ -67,6 +73,7 @@ namespace WpfApp1.ViewModels
 
         public IRelayCommand NavigateHomeCommand { get; set; }
         public IRelayCommand NavigateAboutCommand { get; set; }
+        public IRelayCommand NavigateTodoItemCommand { get; set; }
         public IRelayCommand ShowDialogCommand { get; }
         public IRelayCommand ToggleThemeCommand { get; }
     }
