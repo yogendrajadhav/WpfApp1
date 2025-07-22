@@ -14,6 +14,7 @@
             <Button Content="TodoItems" Margin="5" Command="{Binding NavigateTodoItemCommand}"></Button>
             <Button Content="ShowDialog" Margin="5" Command="{Binding ShowDialogCommand}"></Button>
             <Button Content="Toggle Theme" Margin="5" Command="{Binding ToggleThemeCommand}"></Button>
+            <Button Content="Load Parent Child View" Margin="5" Command="{Binding LoadParentChildViewCommand}"></Button>
         </StackPanel>
 
         <ContentControl Content="{Binding CurrentView}" Margin="5"></ContentControl>

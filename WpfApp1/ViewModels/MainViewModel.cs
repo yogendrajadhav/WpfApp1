@@ -40,10 +40,13 @@ namespace WpfApp1.ViewModels
 
             ShowDialogCommand = new RelayCommand(() => _dialogService.ShowMessage("Hello", "This is a custom dialog"));
             ToggleThemeCommand = new RelayCommand(SwitchTheme);
+            LoadParentChildViewCommand = new RelayCommand(() =>
+            {
+                CurrentView= _navigationService.GetViewModel<ParentViewModel>();
+            });
 
             CurrentView = _navigationService.GetViewModel<HomeViewModel>();
             ApplyTheme(_settingsService.Current.Theme);
-
         }
 
         private void SwitchTheme()
@@ -53,7 +56,6 @@ namespace WpfApp1.ViewModels
             _settingsService.Save();
             ApplyTheme(newTheme);
         }
-
         private void ApplyTheme(string themeName)
         {
             string path = $"Themes/{themeName}.xaml";
@@ -76,5 +78,6 @@ namespace WpfApp1.ViewModels
         public IRelayCommand NavigateTodoItemCommand { get; set; }
         public IRelayCommand ShowDialogCommand { get; }
         public IRelayCommand ToggleThemeCommand { get; }
+        public IRelayCommand LoadParentChildViewCommand { get; }
     }
 }

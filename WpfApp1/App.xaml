@@ -3,17 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfApp1"
              xmlns:viewModels="clr-namespace:WpfApp1.ViewModels"
-             xmlns:views="clr-namespace:WpfApp1.Views"
-             >
+             xmlns:views="clr-namespace:WpfApp1.Views">
     <Application.Resources>
-         <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
-             <views:HomeView></views:HomeView>
-         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+            <views:HomeView></views:HomeView>
+        </DataTemplate>
         <DataTemplate DataType="{x:Type viewModels:AboutViewModel}">
             <views:AboutView></views:AboutView>
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewModels:TodoItemViewModel}">
             <views:TodoItemView></views:TodoItemView>
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:ParentViewModel}">
+            <views:Parent></views:Parent>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:ChildViewModel}">
+            <views:Child></views:Child>
+        </DataTemplate>
+
     </Application.Resources>
 </Application>
